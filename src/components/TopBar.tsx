@@ -1,16 +1,17 @@
 import { useEffect, useState } from 'react';
 
+// The brand link goes to the overview, so the menu starts with the sections below it
 const NAV_LINKS = [
-  { href: '#overview', label: 'Overview' },
   { href: '#investigate', label: 'Investigate' },
-  { href: '#rising', label: 'The suspects' },
-  { href: '#cities', label: 'Factors by city' },
-  { href: '#causes', label: 'Findings and actions' },
+  { href: '#rising', label: 'Suspects' },
+  { href: '#cities', label: 'By city' },
+  { href: '#causes', label: 'Findings' },
   { href: '#history', label: 'Since 1902' },
-  { href: '#gaps', label: 'What is missing' },
-  { href: '#ask', label: 'Ask Detective', className: 'askl' },
+  { href: '#gaps', label: 'Missing data' },
   { href: '#glossary', label: 'Glossary' },
   { href: '#sources', label: 'Sources' },
+  { href: '#team', label: 'Team' },
+  { href: '#ask', label: 'Ask Detective', className: 'askl' },
 ];
 
 interface Props { onUpload: () => void; onAsk: () => void; }

@@ -4,7 +4,7 @@ import TopBar from './components/TopBar';
 import HeroSection from './components/HeroSection';
 import RisingSection from './components/RisingSection';
 import CitiesMatrix from './components/CitiesMatrix';
-import { GapsSection, GlossarySection, SourcesSection } from './components/StaticSections';
+import { GapsSection, GlossarySection, SourcesSection, TeamSection } from './components/StaticSections';
 import UploadModal from './components/UploadModal';
 import DetectivePanel from './components/DetectivePanel';
 import { ACTIONS } from './data/findings';
@@ -82,6 +82,7 @@ export default function App() {
 
         <GlossarySection />
         <SourcesSection />
+        <TeamSection />
       </main>
 
       <footer>

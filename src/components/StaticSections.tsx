@@ -128,3 +128,37 @@ export function GlossarySection() {
     </section>
   );
 }
+
+const TEAM: { name: string; role: string; initials?: string }[] = [
+  { name: 'Warly De La Cruz', initials: 'WD', role: 'Senior Data Engineer, Full-Stack Software and AI Developer, and Solutions Architect' },
+  { name: 'Gian Balaag', role: 'Senior Software and AI Full-Stack Developer and Data Engineer' },
+  { name: 'Rozaida Tuazon', role: 'Professor, AsiaTech College, and Data Analyst' },
+  { name: 'John Lodie Crisostomo', role: 'BSIT Student' },
+  { name: 'Gem Erien Capistrano', role: 'BSIT Student' },
+  { name: 'Alfonso Vianney Sebolino', role: 'BSIT Student' },
+];
+
+const initials = (name: string) => {
+  const parts = name.split(' ');
+  return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+};
+
+export function TeamSection() {
+  return (
+    <section id="team" className="sec wrap">
+      <h2 className="sec-h">Team</h2>
+      <p className="sec-intro">The developers and members behind Earth Trend Detective.</p>
+      <ul className="team">
+        {TEAM.map(m => (
+          <li key={m.name} className="card member">
+            <span className="avatar" aria-hidden="true">{m.initials ?? initials(m.name)}</span>
+            <div>
+              <h3>{m.name}</h3>
+              <p>{m.role}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
+  );
+}
